@@ -1,0 +1,68 @@
+.nav {
+
+  ul {
+    list-style: none;
+    padding: 10px 0;
+    text-align: center;
+
+    @include mobilefirst($bp-tablet) {
+      float: right;
+      text-align: left;
+    }
+
+    li {
+      display: block;
+      position: relative;
+
+      @include mobilefirst($bp-tablet) {
+        display: inline-block;
+      }
+
+      a {
+        text-decoration: none;
+        display: block;
+        padding: 5px 10px;
+        border-radius: $br;
+
+        &:focus,
+        &:hover {
+          background: $color-primary;
+          color: white;
+        }
+      }
+
+      ul{
+        background: white;
+        padding-top: 0;
+        left: 0;
+        font-size: 90%;
+
+        @include mobilefirst($bp-tablet) {
+          box-shadow: 0px 1px 2px 0px rgba(221,221,221,1);
+          border-radius: $br;
+          position: absolute;
+          z-index: 10;
+          display: none;
+        }
+
+        a {
+          color: lighten($color-primary, 15%);
+
+          &:focus,
+          &:hover {
+            background: transparent;
+            color: $color-primary;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      &:focus,
+      &:hover {
+        ul {
+          display: block;
+        }
+      }
+    }
+  }
+}

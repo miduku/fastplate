@@ -1,0 +1,27 @@
+.header {
+  background: white;
+  border-bottom: 1px solid $color-tertiary;
+  width: 100%;
+  z-index: 9;
+  margin-bottom: 10px;
+  @extend .clear;
+
+  @include mobilefirst($bp-tablet) {
+    position: fixed;
+  }
+}
+
+.logo {
+  padding: 15px 0;
+  text-align: center;
+  font-weight: bold;
+
+  @include mobilefirst($bp-tablet) {
+    float: left;
+    text-align: left;
+  }
+
+  img {
+
+  }
+}

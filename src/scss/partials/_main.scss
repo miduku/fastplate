@@ -1,0 +1,35 @@
+.main {
+
+  .ac{
+    color: $color-primary;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    @include mobilefirst($bp-tablet) {
+      padding-top: 80px;
+
+        + h2 {
+          margin-top: -80px;
+        }
+    }
+  }
+
+  /*Style to help visualize grid for demo purposes*/
+  .grid-style-helper {
+    background: lighten($color-primary, 35%);
+    border: 1px solid $color-primary;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    min-height: 50px;
+  }
+
+  .container {
+    hr{
+      margin-top: $padding*2;
+
+      @include mobilefirst($bp-tablet) {
+        margin-top: $padding*4;
+      }
+    }
+  }
+}

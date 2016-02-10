@@ -1,0 +1,9 @@
+.footer {
+  padding: $padding 0 $padding/2;
+  margin-top: $padding*2;
+  border-top: 1px solid $color-tertiary;
+
+  a{
+    text-decoration: none;
+  }
+}
